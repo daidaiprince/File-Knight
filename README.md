@@ -153,6 +153,65 @@ if myFP.verify():
         messagebox.showerror('資訊', '指紋比對失敗!')
 # 關閉設備
   myFP.close()
+```
+***
+Fernet模組
 
+Fernet 透過以下方式克服了開發人員在設計系統時可能犯的錯誤：
+*	提供用於產生密鑰的安全機制（密鑰類似於密碼）。
+*	選擇安全加密算法（AES 使用 CBS 模式和 PKCS7 填充）。
+*	隨機分配一個安全的“salt”值使加密更加安全。
+*	時間戳加密的訊息。
+*	對消息進行簽名（使用 HMAC 和 SHA256）以檢測任何更改它的嘗試。
+
+模組來源：https://github.com/pyca/cryptography
+
+安裝指令：```pip install cryptography```
+```
+使用範例：
+# 匯入檔案加解密模組
+  from cryptography.hazmat.backends import default_backend
+  from cryptography.hazmat.primitives import hashes
+  from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+  from cryptography.fernet import Fernet
+  from cryptography.fernet import InvalidToken
+  from cryptography import *
+  import cryptography
+  global token
+
+  password = ‘www.utaipei.edu.tw’
+  salt = b'salt_'
+  kdf = PBKDF2HMAC(algorithm=(hashes.SHA256()),
+       length=32, salt=salt, iterations=100000,
+       backend=(default_backend()))
+       key = base64.urlsafe_b64encode(kdf.derive(password))
+
+# 將檔案test.txt以二進制方式讀取  
+file = open(‘test.txt’, 'rb')
+  data = file.read()
+  file.close()
+  token = Fernet(key)
+
+# 將檔案test.txt加密
+  encrypted = token.encrypt(data)
+  
+# 將加密資料寫入至檔案encrypt.txt中 
+  file = open(‘encrypt.txt’, 'wb')
+  file.write(encrypted)
+  file.close()
+  
+# 將檔案encrypt.txt以二進制方式讀取
+  file = open(‘encrypt.txt’, 'rb')
+  data = file.read()
+  file.close()
+  token = Fernet(key)
+  
+# 將檔案encrypt.txt解密
+  decrypted = token.decrypt(data)
+
+# 將解密資料寫入至檔案decrypt.txt中
+  file = open(‘decrypt.txt’, 'wb')
+  file.write(decrypted)
+  file.close()
 ```
 ***
