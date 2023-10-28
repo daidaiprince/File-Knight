@@ -14,3 +14,8 @@
 
 
 ![系統架構](https://github.com/daidaiprince/image-database/blob/main/SystemStructure.png?raw=true "系統架構")
+
+
+## 系統流程
+![系統流程](https://github.com/daidaiprince/image-database/blob/main/FlowChart.png?raw=true "系統流程")
+
