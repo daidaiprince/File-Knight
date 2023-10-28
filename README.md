@@ -35,7 +35,7 @@
 
 
 ## 使用模組
-PyUSB模組
+PyUSB 模組
 
 
 PyUSB 主要在 Linux 和 Windows 上開發和測試，但可以在任何運行 Python >= 3.7、ctypes 和至少一個內置後端的平台上正常工作。
