@@ -28,12 +28,13 @@
 
 ## 模組套件
 PyUSB模組
+
 PyUSB 主要在 Linux 和 Windows 上開發和測試，但可以在任何運行 Python >= 3.7、ctypes 和至少一個內置後端的平台上正常工作。
 PyUSB 支持libusb 1.0、libusb 0.1 和 OpenUSB。其中，libusb 1.0 目前推薦適用於大多數案例。
 在 Linux 和 BSD 上，這些通常可以在發行版的官方存儲庫中獲得。
 
 模組來源：https://github.com/pyusb/pyusb
-安裝指令：pip install pyusb
+安裝指令：```pip install pyusb```
 使用範例：
 ```
 # 匯入USB識別模組
@@ -58,7 +59,7 @@ PyOTP模組
 
 模組來源：https://github.com/pyauth/pyotp
 
-```安裝指令：pip install pyotp```
+安裝指令：```pip install pyotp```
 
 使用範例：
 ```
