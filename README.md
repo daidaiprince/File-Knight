@@ -57,7 +57,7 @@ PyOTP模組
 	Google Authenticator和其他OTP客戶端應用程式允許儲存多個OTP機密並使用QR碼提供這些機密
 
 模組來源：https://github.com/pyauth/pyotp
-安裝指令：pip install pyotp
+```安裝指令：pip install pyotp```
 使用範例：
 
 #==============
