@@ -62,7 +62,7 @@ PyUSB 支持libusb 1.0、libusb 0.1 和 OpenUSB。其中，libusb 1.0 目前推�
        print(d)
 ```
 ***
-PyOTP模組
+PyOTP 模組
 
 *	OTP涉及共享密鑰，儲存在手機和伺服器上
 
@@ -124,7 +124,7 @@ PyOTP模組
 
 ***
 
- FingerPrint模組
+ FingerPrint 模組
  
 這是筆記型本電腦上指紋辨識器的驅動程式（LG Gram 2018）。該腳本也可以在其他筆記型電腦，甚至帶有指紋辨識器的個人電腦上運行。
 使用 Windows Biometric Framework API 與指紋辨識器進行互動。從技術上講，可以使用 API 存取任何 WBF 設備，包括臉部識別和虹膜識別。
@@ -153,7 +153,7 @@ if myFP.verify():
   myFP.close()
 ```
 ***
-Fernet模組
+Fernet 模組
 
 Fernet 透過以下方式克服了開發人員在設計系統時可能犯的錯誤：
 *	提供用於產生密鑰的安全機制（密鑰類似於密碼）。
@@ -213,7 +213,7 @@ file = open(‘test.txt’, 'rb')
   file.close()
 ```
 ***
-Steganography模組
+Steganography 模組
 
 隱藏方法：
 
