@@ -58,6 +58,7 @@ PyOTP模組
 模組來源：https://github.com/pyauth/pyotp
 安裝指令：pip install pyotp
 使用範例：
+'''python
 #==============
 # 伺服器端
 #==============
@@ -100,127 +101,8 @@ PyOTP模組
   print( url )
   with open ( 'M10716012.png' , 'wb' ) as f:
       img.save ( f )
-
+'''
 執行用戶端程式後，產生的二維條碼檔案如圖3-2所示。
 圖3-2 OTP二維條碼
  
-
-
-FingerPrint模組
-這是筆記型本電腦上指紋辨識器的驅動程式（LG Gram 2018）。該腳本也可以在其他筆記型電腦，甚至帶有指紋辨識器的個人電腦上運行。
-使用 Windows Biometric Framework API 與指紋辨識器進行互動。從技術上講，可以使用 API 存取任何 WBF 設備，包括臉部識別和虹膜識別。
-
-模組來源：https://github.com/luspock/FingerPrint
-安裝指令：使用FingerPrint 類別
-使用範例：
-# 匯入指紋辨識模組
-  from fingerprint import FingerPrint
-  global myFP
-
-# 建立myFP物件類別
-  myFP = FingerPrint()
-  
-# 打開設備
-  myFP.open()
-   # 進行指紋比對
-if myFP.verify():
-        messagebox.showinfo('資訊', '指紋比對成功!')
-    else:
-        messagebox.showerror('資訊', '指紋比對失敗!')
-# 關閉設備
-  myFP.close()
-
-
-Fernet模組
-Fernet 透過以下方式克服了開發人員在設計系統時可能犯的錯誤：
-	提供用於產生密鑰的安全機制（密鑰類似於密碼）。
-	選擇安全加密算法（AES 使用 CBS 模式和 PKCS7 填充）。
-	隨機分配一個安全的“salt”值使加密更加安全。
-	時間戳加密的訊息。
-	對消息進行簽名（使用 HMAC 和 SHA256）以檢測任何更改它的嘗試。
-
-模組來源：https://github.com/pyca/cryptography
-安裝指令：pip install cryptography
-使用範例：
-# 匯入檔案加解密模組
-  from cryptography.hazmat.backends import default_backend
-  from cryptography.hazmat.primitives import hashes
-  from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
-  from cryptography.fernet import Fernet
-  from cryptography.fernet import InvalidToken
-  from cryptography import *
-  import cryptography
-  global token
-
-  password = ‘www.utaipei.edu.tw’
-  salt = b'salt_'
-  kdf = PBKDF2HMAC(algorithm=(hashes.SHA256()),
-       length=32, salt=salt, iterations=100000,
-       backend=(default_backend()))
-       key = base64.urlsafe_b64encode(kdf.derive(password))
-
-# 將檔案test.txt以二進制方式讀取  
-file = open(‘test.txt’, 'rb')
-  data = file.read()
-  file.close()
-  token = Fernet(key)
-
-# 將檔案test.txt加密
-  encrypted = token.encrypt(data)
-  
-# 將加密資料寫入至檔案encrypt.txt中 
-  file = open(‘encrypt.txt’, 'wb')
-  file.write(encrypted)
-  file.close()
-  
-# 將檔案encrypt.txt以二進制方式讀取
-  file = open(‘encrypt.txt’, 'rb')
-  data = file.read()
-  file.close()
-  token = Fernet(key)
-  
-# 將檔案encrypt.txt解密
-  decrypted = token.decrypt(data)
-
-# 將解密資料寫入至檔案decrypt.txt中
-  file = open(‘decrypt.txt’, 'wb')
-  file.write(decrypted)
-  file.close()
-
-
-Steganography模組
-隱藏方法：
-為該項目開發的一種方法稱為Shuffle方法，它包括以隨機順序對位元進行混淆，產生一個檔案（密鑰），這是檢索隱藏訊息必需的，沒有它就無法檢索。
-
-隨機播放方法：
-隨機播放方法包括在隱藏訊息之前以隨機順序隨機播放位元組的位元。順序保存在一個包含 8 個不相關元素的列表（稱為索引/鍵列表）中，每個元素的索引是指要更改的位置位元，值是目標索引。例如，在第一個元素（位置0）是2，第二個（位置1）是6等的列表中，意味著位置0的位元將轉到位置2，位置1的位元將轉到位置6...下面是一個索引列表的示例，以及使用該列表對位元組進行混淆時會發生什麼。
-
- 
- 
-隨機播放方法
-
-使用此方法檢索訊息時，必須提供列表以獲取正確的資料，否則無法獲取。該列表總組合共有8！個，等於40,320。但這種方法不是只使用1個列表，而是實際使用10個列表，將組合數提高到8!10等於1.1355473e+46。
-它使用了10個列表，只是為了使暴力破解成為不可能的事。它使用位元組索引的最後一位元組來知道使用哪個列表來打亂該位元組，例如，位元組#6543將使用列表#3打亂，位元組#6544使用列表#4等等。
-任何視訊檔案都可以作為輸入，但輸出必須是avi，這是一個支持原始視訊的容器。需要使用FFmpeg將音訊流從原始視訊檔案複製到載體檔案。
-
-模組來源：https://github.com/rafaeloliveira00/Steganography
-安裝指令：使用hide和retrieve 函數
-使用範例：
-# 匯入影片隱藏還原檔案模組
-  import bytes_manipulation as bm
-  import video
-  import message
-  import utils
-  import sys
-  import cv2
-
-# 指定隱藏的檔案(str1)、載體MP4(str2)和載體AVI(str3)
-str1='c:\1.doc '
-str2='c:\2.mp4 '
-str3='c:\3.avi '       
-
-#將檔案隱藏於MP4影片中
-hide(str2, str3, str1, will_shuffle=True, dict_index=None)
-#從AVI影片中還原檔案
- retrieve('c:\3.avi ', 'c:\Keys ')
 
