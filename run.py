@@ -2,7 +2,7 @@
 from my_func import *
 
 
-""" 顯示軟體LOGO圖片 """
+""" 顯示軟體LOGO視窗 """
 splash_logo()
 
 
