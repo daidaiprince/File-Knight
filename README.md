@@ -263,6 +263,7 @@ hide(str2, str3, str1, will_shuffle=True, dict_index=None)
 ## 打包系統
 本文開發之檔案保護系統，只能在開發環境內使用，為了讓沒有安裝Python電腦也能夠使用本系統，必須將Python程式封裝成獨立執行檔案，使用的是auto-py-to-exe，它是圖形化介面封裝工具，相關功能透過滑鼠點選完成，無須記憶指令。
 
+
 模組名稱：auto-py-to-exe
 
 
