@@ -36,6 +36,7 @@ PyUSB 支持libusb 1.0、libusb 0.1 和 OpenUSB。其中，libusb 1.0 目前推�
 模組來源：https://github.com/pyusb/pyusb
 
 安裝指令：```pip install pyusb```
+
 使用範例：
 ```
 # 匯入USB識別模組
