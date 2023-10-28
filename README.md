@@ -314,4 +314,4 @@ hide(str2, str3, str1, will_shuffle=True, dict_index=None)
 
 ![OTP二維條碼](https://github.com/daidaiprince/image-database/blob/main/qrcode.png?raw=true "OTP二維條碼")
 
-
+[檔案連結](https://drive.google.com/file/d/1lXyjOnBXE4bZO9XLK8V5RokPpk1BG010/view?usp=sharing)
