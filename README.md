@@ -59,7 +59,7 @@ PyUSB 支持libusb 1.0、libusb 0.1 和 OpenUSB。其中，libusb 1.0 目前推�
      if (d.idVendor == vid) & (d.idProduct == pid):
        print(d)
 ```
-
+***
 PyOTP模組
 
 *	OTP涉及共享密鑰，儲存在手機和伺服器上
