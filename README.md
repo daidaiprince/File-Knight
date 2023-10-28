@@ -305,8 +305,8 @@ hide(str2, str3, str1, will_shuffle=True, dict_index=None)
 ## 系統功能
 
 
-![身分認證階段操作](https://github.com/daidaiprince/image-database/blob/main/SystemFunc1.png?raw=true "身分認證階段操作")
+![身分認證階段操作](https://github.com/daidaiprince/image-database/blob/main/SystemFunction1.png?raw=true "身分認證階段操作")
 
-![資料保護階段操作](https://github.com/daidaiprince/image-database/blob/main/SystemFunc2.png?raw=true "資料保護階段操作")
+![資料保護階段操作](https://github.com/daidaiprince/image-database/blob/main/SystemFunction2.png?raw=true "資料保護階段操作")
 
 
