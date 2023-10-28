@@ -310,7 +310,7 @@ hide(str2, str3, str1, will_shuffle=True, dict_index=None)
 
 
 ## 展示系統
-檔案名稱為，移除指紋辨識和USB鎖功能，可掃描以下二維條碼檔案，以取得OTP驗證碼測試。
+檔案名稱為，移除指紋辨識和USB鎖功能，可掃描以下二維條碼檔案，以取得OTP驗證碼進行測試。
 
 ![OTP二維條碼](https://github.com/daidaiprince/image-database/blob/main/qrcode.png?raw=true "OTP二維條碼")
 
