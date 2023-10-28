@@ -6,4 +6,5 @@
 ![檔案騎士](https://github.com/daidaiprince/File-Knight/blob/main/image/splash_logo.png?raw=true "檔案騎士")
 
 ## 開發緣由
-研究生期間，接觸到資訊安全相關課程，而想進一步研究資料的保護。
+研究所期間，對於學校老師上課提到的資訊安全，感到十分新奇，進而引發作此工具的想法，同時也是我論文系統所設計的檔案保護系統。
+
