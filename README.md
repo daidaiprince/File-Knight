@@ -305,7 +305,7 @@ hide(str2, str3, str1, will_shuffle=True, dict_index=None)
 ## 系統功能
 
 
-
+&emsp;
 
 ![系統登入階段](https://github.com/daidaiprince/image-database/blob/main/SystemFunction1.png?raw=true "系統登入階段")
 
