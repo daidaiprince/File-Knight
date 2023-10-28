@@ -298,7 +298,15 @@ hide(str2, str3, str1, will_shuffle=True, dict_index=None)
 6.按瀏覽檔案夾鈕選擇UPX程式所在位置。
  
 7.按將.PY轉換為.EXE鈕，等候產生EXE檔案。
- 
+
 8.按打開輸出目錄鈕。
  
 9.此處的EXE檔案可以拿到未安裝Python的電腦上使用。
+
+
+## 系統功能
+
+
+![身分認證階段操作](https://github.com/daidaiprince/image-database/blob/main/SystemFunc1.png?raw=true "身分認證階段操作")
+
+![資料保護階段操作](https://github.com/daidaiprince/image-database/blob/main/SystemFunc2.png?raw=true "資料保護階段操作")
