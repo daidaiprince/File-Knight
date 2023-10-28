@@ -260,3 +260,38 @@ hide(str2, str3, str1, will_shuffle=True, dict_index=None)
  retrieve('c:\3.avi ', 'c:\Keys ')
 ```
 
+## 打包系統
+本文開發之檔案保護系統，只能在開發環境內使用，為了讓沒有安裝Python電腦也能夠使用本系統，必須將Python程式封裝成獨立執行檔案，使用的是auto-py-to-exe，它是圖形化介面封裝工具，相關功能透過滑鼠點選完成，無須記憶指令。
+
+模組名稱：auto-py-to-exe
+
+
+模組來源：https://github.com/brentvollebregt/auto-py-to-exe
+
+安裝指令：```pip install auto-py-to-exe```
+
+使用前必須完成以下條件：
+
+1. 安裝Google Chrome瀏覽器，其為執行圖形介面底層框架。
+
+2. 下載UPX壓縮檔並將其解壓縮，其為EXE資源壓縮工具 。
+
+本系統的封裝步驟說明：
+
+1. 腳本位置按瀏覽鈕選擇要封裝成EXE檔的py檔。
+
+2. 點選單檔案。
+
+3. 點選基於視窗(隱藏控制台)。
+ 
+4. 按瀏覽鈕選擇執行檔呈現的圖示。
+ 
+5. 將程式使用到的資源檔(圖像、聲音)一併以新增檔案附加。
+ 
+6. 按瀏覽檔案夾鈕選擇UPX程式所在位置。
+ 
+7. 按將.PY轉換為.EXE鈕，等候產生EXE檔案。
+ 
+8. 按打開輸出目錄鈕。
+ 
+9. 此處的EXE檔案可以拿到未安裝Python的電腦上使用。
