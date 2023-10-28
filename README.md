@@ -271,11 +271,13 @@ hide(str2, str3, str1, will_shuffle=True, dict_index=None)
 
 安裝指令：```pip install auto-py-to-exe```
 
+
 使用前必須完成以下條件：
 
-1. 安裝Google Chrome瀏覽器，其為執行圖形介面底層框架。
+1.安裝Google Chrome瀏覽器，其為執行圖形介面底層框架。
 
-2. 下載UPX壓縮檔並將其解壓縮，其為EXE資源壓縮工具 。
+2.下載UPX壓縮檔並將其解壓縮，其為EXE資源壓縮工具 。
+
 
 本系統的封裝步驟說明：
 
