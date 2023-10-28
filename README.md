@@ -35,6 +35,7 @@ PyUSB 支持libusb 1.0、libusb 0.1 和 OpenUSB。其中，libusb 1.0 目前推�
 模組來源：https://github.com/pyusb/pyusb
 安裝指令：pip install pyusb
 使用範例：
+```
 # 匯入USB識別模組
   import usb.core
   import usb.util
@@ -47,7 +48,7 @@ PyUSB 支持libusb 1.0、libusb 0.1 和 OpenUSB。其中，libusb 1.0 目前推�
    # 如果找到符合VID及PID的USB裝置，則列印該裝置明細
      if (d.idVendor == vid) & (d.idProduct == pid):
        print(d)
-
+```
 
 PyOTP模組
 	OTP涉及共享密鑰，儲存在手機和伺服器上
@@ -58,7 +59,7 @@ PyOTP模組
 模組來源：https://github.com/pyauth/pyotp
 安裝指令：pip install pyotp
 使用範例：
-'''python
+
 #==============
 # 伺服器端
 #==============
@@ -101,7 +102,7 @@ PyOTP模組
   print( url )
   with open ( 'M10716012.png' , 'wb' ) as f:
       img.save ( f )
-'''
+
 執行用戶端程式後，產生的二維條碼檔案如圖3-2所示。
 圖3-2 OTP二維條碼
  
