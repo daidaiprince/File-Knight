@@ -60,9 +60,13 @@ PyUSB 支持libusb 1.0、libusb 0.1 和 OpenUSB。其中，libusb 1.0 目前推�
 ```
 
 PyOTP模組
+
 	OTP涉及共享密鑰，儲存在手機和伺服器上
+
 	可以在沒有網際網路連接的手機上產生OTP
+
 	OTP 應始終用作身份認證的第二個因子（如果手機遺失，帳戶仍受密碼保護）
+
 	Google Authenticator和其他OTP客戶端應用程式允許儲存多個OTP機密並使用QR碼提供這些機密
 
 模組來源：https://github.com/pyauth/pyotp
