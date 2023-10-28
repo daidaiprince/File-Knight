@@ -310,11 +310,3 @@ hide(str2, str3, str1, will_shuffle=True, dict_index=None)
 ![資料保護階段操作](https://github.com/daidaiprince/image-database/blob/main/SystemFunc2.png?raw=true "資料保護階段操作")
 
 
-
-## 展示程式
-檔案名稱為run-No_USB_Fingerprint.exe，移除指紋辨識和USB鎖功能，可掃描以下二維條碼檔案，以取得OTP驗證碼進行測試。
-
-![OTP二維條碼](https://github.com/daidaiprince/image-database/blob/main/qrcode.png?raw=true "OTP二維條碼")
-
-[檔案連結](https://drive.google.com/file/d/19JVq5w0DAe1_IVhQd4rETSSxV3KlmUsD/view?usp=sharing)
-此檔案可能會被防毒軟體判斷為病毒，若還是有使用上的疑慮，可自行編譯執行檔來使用!!!
