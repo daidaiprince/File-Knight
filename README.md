@@ -121,9 +121,37 @@ PyUSB 支持libusb 1.0、libusb 0.1 和 OpenUSB。其中，libusb 1.0 目前推�
 ```
 執行用戶端程式後，產生的二維條碼檔案如下圖所示。
 
-圖 OTP二維條碼
 
 ![OTP二維條碼](https://github.com/daidaiprince/image-database/blob/main/qrcode.png?raw=true "OTP二維條碼")
 
- 
+***
 
+ FingerPrint模組
+ 
+這是筆記型本電腦上指紋辨識器的驅動程式（LG Gram 2018）。該腳本也可以在其他筆記型電腦，甚至帶有指紋辨識器的個人電腦上運行。
+使用 Windows Biometric Framework API 與指紋辨識器進行互動。從技術上講，可以使用 API 存取任何 WBF 設備，包括臉部識別和虹膜識別。
+
+模組來源：https://github.com/luspock/FingerPrint
+
+安裝指令：使用FingerPrint 類別
+
+使用範例：
+```
+# 匯入指紋辨識模組
+  from fingerprint import FingerPrint
+  global myFP
+
+# 建立myFP物件類別
+  myFP = FingerPrint()
+  
+# 打開設備
+  myFP.open()
+   # 進行指紋比對
+if myFP.verify():
+        messagebox.showinfo('資訊', '指紋比對成功!')
+    else:
+        messagebox.showerror('資訊', '指紋比對失敗!')
+# 關閉設備
+  myFP.close()
+
+```
