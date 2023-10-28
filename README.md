@@ -230,3 +230,33 @@ Steganography模組
 ![隨機播放方法](https://github.com/daidaiprince/image-database/blob/main/steg2.png?raw=true )
 
 
+使用此方法檢索訊息時，必須提供列表以獲取正確的資料，否則無法獲取。該列表總組合共有8！個，等於40,320。但這種方法不是只使用1個列表，而是實際使用10個列表，將組合數提高到8!10等於1.1355473e+46。
+它使用了10個列表，只是為了使暴力破解成為不可能的事。它使用位元組索引的最後一位元組來知道使用哪個列表來打亂該位元組，例如，位元組#6543將使用列表#3打亂，位元組#6544使用列表#4等等。
+任何視訊檔案都可以作為輸入，但輸出必須是avi，這是一個支持原始視訊的容器。需要使用FFmpeg將音訊流從原始視訊檔案複製到載體檔案。
+
+
+模組來源：https://github.com/rafaeloliveira00/Steganography
+
+安裝指令：使用hide和retrieve 函數
+
+```
+使用範例：
+# 匯入影片隱藏還原檔案模組
+  import bytes_manipulation as bm
+  import video
+  import message
+  import utils
+  import sys
+  import cv2
+
+# 指定隱藏的檔案(str1)、載體MP4(str2)和載體AVI(str3)
+str1='c:\1.doc '
+str2='c:\2.mp4 '
+str3='c:\3.avi '       
+
+#將檔案隱藏於MP4影片中
+hide(str2, str3, str1, will_shuffle=True, dict_index=None)
+#從AVI影片中還原檔案
+ retrieve('c:\3.avi ', 'c:\Keys ')
+```
+
