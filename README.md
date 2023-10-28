@@ -83,9 +83,9 @@ PyOTP模組
   import base64
   import pyotp
 
-# 使用者自訂伺服器端金鑰為M10716012    
+# 使用者自訂伺服器端金鑰為python    
   global string
-  string = 'M10716012'
+  string = 'python'
 
 # 產生TOTP碼
   global secretKey
@@ -109,17 +109,19 @@ PyOTP模組
   import pyotp
   import qrcode
   import base64
-# 使用者自訂用戶端金鑰為M10716012
-  string= 'M10716012'
+# 使用者自訂用戶端金鑰為python
+  string= 'python'
   secretKey = base64. b32encode ( string. encode ( encoding= "utf-8" ))
 # 產生二維條碼圖檔
-  url = pyotp.totp.TOTP(secretKey).provisioning_uri   ( "M10716012@utaipei.edu.tw" ,issuer_name= 'M10716012' )
+  url = pyotp.totp.TOTP(secretKey).provisioning_uri   ( "python@python.test.org" ,issuer_name= 'python' )
   img = qrcode.make ( url )
   print( url )
-  with open ( 'M10716012.png' , 'wb' ) as f:
+  with open ( 'qrcode.png' , 'wb' ) as f:
       img.save ( f )
 ```
-執行用戶端程式後，產生的二維條碼檔案如圖3-2所示。
-圖3-2 OTP二維條碼
+執行用戶端程式後，產生的二維條碼檔案如下圖所示。
+圖 OTP二維條碼
+![OTP二維條碼](https://github.com/daidaiprince/image-database/blob/main/qrcode.png?raw=true "OTP二維條碼")
+
  
 
