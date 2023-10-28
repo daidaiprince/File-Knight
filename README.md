@@ -60,7 +60,7 @@ PyUSB 支持libusb 1.0、libusb 0.1 和 OpenUSB。其中，libusb 1.0 目前推�
        print(d)
 ```
 ***
-PyOTP模組
+++PyOTP模組++
 
 *	OTP涉及共享密鑰，儲存在手機和伺服器上
 
@@ -120,7 +120,9 @@ PyOTP模組
       img.save ( f )
 ```
 執行用戶端程式後，產生的二維條碼檔案如下圖所示。
+
 圖 OTP二維條碼
+
 ![OTP二維條碼](https://github.com/daidaiprince/image-database/blob/main/qrcode.png?raw=true "OTP二維條碼")
 
  
