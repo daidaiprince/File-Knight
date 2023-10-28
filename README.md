@@ -309,4 +309,12 @@ hide(str2, str3, str1, will_shuffle=True, dict_index=None)
 
 ![系統執行階段](https://github.com/daidaiprince/image-database/blob/main/SystemFunction2.png?raw=true "系統執行階段")
 
+![系統執行階段](https://github.com/daidaiprince/image-database/blob/main/SystemFunction3.png?raw=true "系統執行階段")
+
+![系統執行階段](https://github.com/daidaiprince/image-database/blob/main/SystemFunction4.png?raw=true "系統執行階段")
+
+![系統執行階段](https://github.com/daidaiprince/image-database/blob/main/SystemFunction5.png?raw=true "系統執行階段")
+
+![系統執行階段](https://github.com/daidaiprince/image-database/blob/main/SystemFunction6.png?raw=true "系統執行階段")
+
 
